@@ -44,7 +44,9 @@ const createMahasiswaController = (req, res) => {
   if (isCreated) {
     return res.status(200).send({
       status: 'success',
-      data: isCreated,
+      data: {
+        mahasiswaId: id,
+      },
     });
   }
   return res.status(400).send({
